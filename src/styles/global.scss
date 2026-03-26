@@ -1,4 +1,5 @@
 :root {
+  --primary-color: #2ca884;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #111827;
   background: #f9fafb;
@@ -7,4 +8,16 @@
 body {
   background: #f9fafb;
   color: #111827;
+}
+
+.page-title {
+  color: var(--primary-color) !important;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--primary-color) !important;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
