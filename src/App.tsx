@@ -1,6 +1,7 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
 import { AboutPage } from "./pages/AboutPage";
 import { CreateUserPage } from "./pages/CreateUserPage";
+import { LoginPage } from "./pages/LoginPage";
 import "./styles/app.scss";
 
 function App() {
@@ -11,12 +12,14 @@ function App() {
         <nav className="app__nav">
           {/* <Link to="/">Home</Link> */}
           {/* <Link to="/sobre">Sobre</Link> */}
+          <Link to="/login">Login</Link>
         </nav>
       </header>
 
       <main className="app__content">
         <Routes>
           <Route path="/" element={<CreateUserPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/sobre" element={<AboutPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
