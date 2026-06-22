@@ -16,11 +16,13 @@ export function CreateUserPage() {
         />
         <Input
           label="Email"
+          type="email"
           placeholder="Digite seu email"
           icon={<FaEnvelope size={16} />}
         />
         <Input
           label="Password"
+          type="password"
           placeholder="Digite sua senha"
           icon={<FaLock size={16} />}
         />
