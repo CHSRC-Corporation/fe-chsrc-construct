@@ -12,12 +12,15 @@ export function LoginPage() {
         <Input
           label="Email"
           placeholder="Digite seu email"
+          type="email"
+          autoComplete="email"
           icon={<FaEnvelope size={16} />}
         />
         <Input
           label="Senha"
           placeholder="Digite sua senha"
           type="password"
+          autoComplete="current-password"
           icon={<FaLock size={16} />}
         />
         <Button label="Entrar" />
