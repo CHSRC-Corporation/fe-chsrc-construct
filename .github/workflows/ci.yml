@@ -30,3 +30,11 @@ jobs:
 
       - name: Test
         run: npm run test --if-present
+
+      - name: Cypress E2E
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          start: npm run preview -- --host 127.0.0.1 --port 5173
+          wait-on: http://127.0.0.1:5173
+          command: npm run cy:run
