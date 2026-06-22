@@ -1,32 +1,29 @@
-import { FaEnvelope, FaLock, FaUser } from "react-icons/fa";
+import { FaEnvelope, FaLock } from "react-icons/fa";
 import { Input } from "../components/input/input";
 import { Button } from "../components/button/button";
 
-export function CreateUserPage() {
+export function LoginPage() {
   return (
     <section>
-      <h2 className="page-title">Crie seu usuário</h2>
-      <p>Por favor, preencha os campos abaixo para criar seu usuário.</p>
+      <h2 className="page-title">Login</h2>
+      <p>Informe seu email e senha para acessar sua conta.</p>
 
       <div style={{ marginTop: "1.5rem", maxWidth: 320, display: "grid", gap: "0.75rem" }}>
         <Input
-          label="Nome"
-          placeholder="Digite seu nome"
-          icon={<FaUser size={16} />}
-        />
-        <Input
           label="Email"
-          type="email"
           placeholder="Digite seu email"
+          type="email"
+          autoComplete="email"
           icon={<FaEnvelope size={16} />}
         />
         <Input
-          label="Password"
-          type="password"
+          label="Senha"
           placeholder="Digite sua senha"
+          type="password"
+          autoComplete="current-password"
           icon={<FaLock size={16} />}
         />
-        <Button label="Criar Usuário" />
+        <Button label="Entrar" />
       </div>
     </section>
   );
