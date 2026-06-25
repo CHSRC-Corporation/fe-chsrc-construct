@@ -1,5 +1,4 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
-import { AboutPage } from "./pages/AboutPage";
 import { CreateUserPage } from "./pages/CreateUserPage";
 import { LoginPage } from "./pages/LoginPage";
 import "./styles/app.scss";
@@ -22,7 +21,6 @@ function App() {
           <Route path="/cadastro" element={<CreateUserPage />} />
           {/* Mantém compatibilidade com a antiga rota /login */}
           <Route path="/login" element={<Navigate to="/" replace />} />
-          <Route path="/sobre" element={<AboutPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
