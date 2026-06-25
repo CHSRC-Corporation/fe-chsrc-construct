@@ -1,0 +1,58 @@
+.ui-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  caption-side: bottom;
+}
+
+/* ---------- Cabeçalho ---------- */
+.ui-table__header {
+  background: var(--color-bg);
+}
+
+.ui-table__head {
+  height: 2.75rem;
+  padding: 0 1rem;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+/* ---------- Corpo ---------- */
+.ui-table__row {
+  border-top: 1px solid var(--color-border);
+  transition: background-color 0.15s ease;
+}
+
+.ui-table__body .ui-table__row:hover {
+  background: var(--color-primary-50);
+}
+
+.ui-table__cell {
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+  color: var(--color-ink);
+}
+
+/* Linha clicável (navegação) */
+.ui-table__row--clickable {
+  cursor: pointer;
+}
+
+.ui-table__row--clickable:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-primary-500);
+}

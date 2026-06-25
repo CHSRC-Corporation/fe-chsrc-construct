@@ -1,5 +1,5 @@
-import { type ButtonHTMLAttributes } from "react";
-import "./button.scss";
+import { type ButtonHTMLAttributes } from 'react';
+import './button.scss';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;
@@ -15,24 +15,30 @@ export function Button({
   className,
   loading = false,
   fullWidth = false,
-  loadingLabel = "Enviando...",
+  loadingLabel = 'Enviando...',
   disabled,
   type,
   ...rest
 }: ButtonProps) {
-  const classes = ["btn-primary", fullWidth ? "btn-primary--block" : "", className ?? ""]
+  const classes = [
+    'btn-primary',
+    fullWidth ? 'btn-primary--block' : '',
+    className ?? '',
+  ]
     .filter(Boolean)
-    .join(" ");
+    .join(' ');
 
   return (
     <button
       className={classes}
-      type={type ?? "button"}
+      type={type ?? 'button'}
       disabled={disabled || loading}
       aria-busy={loading || undefined}
       {...rest}
     >
-      {loading ? <span className="btn-primary__spinner" aria-hidden="true" /> : null}
+      {loading ? (
+        <span className="btn-primary__spinner" aria-hidden="true" />
+      ) : null}
       <span>{loading ? loadingLabel : label}</span>
     </button>
   );
