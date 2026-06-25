@@ -1,0 +1,139 @@
+.course-card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 250px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-300);
+}
+
+.course-card:focus-visible {
+  outline: none;
+  box-shadow: var(--ring-primary);
+  border-color: var(--color-primary-500);
+}
+
+/* ---------- Thumbnail ---------- */
+.course-card__thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-card__thumb--1 {
+  background: linear-gradient(135deg, #2c6cb5 0%, #143d72 100%);
+}
+.course-card__thumb--2 {
+  background: linear-gradient(135deg, #1a4f93 0%, #0c2748 100%);
+}
+.course-card__thumb--3 {
+  background: linear-gradient(135deg, #3a86c8 0%, #1f5fb0 100%);
+}
+.course-card__thumb--4 {
+  background: linear-gradient(135deg, #d4860c 0%, #1a4f93 100%);
+}
+
+/* Textura sutil de planta baixa */
+.course-card__thumb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.course-card__play {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-primary-700);
+  padding-left: 3px;
+  box-shadow: 0 6px 16px rgba(12, 39, 72, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.course-card:hover .course-card__play {
+  transform: scale(1.08);
+}
+
+.course-card__level {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  z-index: 1;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-primary-900);
+  background: var(--color-accent-400);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+}
+
+.course-card__duration {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(12, 39, 72, 0.7);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-pill);
+}
+
+/* ---------- Corpo ---------- */
+.course-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.85rem 0.9rem 1rem;
+}
+
+.course-card__title {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+.course-card__desc {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

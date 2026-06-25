@@ -1,0 +1,87 @@
+.app__content > section.home {
+  padding: 0;
+}
+
+/* ---------- Hero ---------- */
+.home__hero {
+  position: relative;
+  padding: 2rem 1.75rem;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-700) 0%,
+    var(--color-primary-900) 100%
+  );
+  overflow: hidden;
+}
+
+.home__hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.home__hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.home__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  svg {
+    color: var(--color-accent-400);
+  }
+}
+
+.home__hero-title {
+  color: #ffffff !important;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.home__hero-text {
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin: 0;
+  max-width: 52ch;
+}
+
+/* ---------- Trilhas ---------- */
+.home__tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.75rem;
+}
+
+@media (max-width: 520px) {
+  .home__hero {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .home__hero-title {
+    font-size: 1.35rem;
+  }
+
+  .home__tracks {
+    padding: 1.25rem;
+    gap: 1.75rem;
+  }
+}
