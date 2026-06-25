@@ -1,0 +1,64 @@
+/* =====================================================================
+   CHSRC Construct — Design Tokens ("Blueprint & Build")
+   Fonte única de verdade para cores, raios, sombras e espaçamentos.
+   Paleta inspirada em engenharia civil:
+     - Azul de planta baixa (blueprint) → conhecimento, confiança
+     - Âmbar de construção            → energia, ação, destaque
+     - Neutros de concreto            → texto e superfícies
+   ===================================================================== */
+:root {
+  /* ----- Marca: Azul Blueprint ----- */
+  --color-primary-50: #ecf3fb;
+  --color-primary-100: #d4e4f7;
+  --color-primary-200: #abc9ef;
+  --color-primary-300: #7fb0e6;
+  --color-primary-500: #1f5fb0;
+  --color-primary-600: #1a4f93;
+  --color-primary-700: #143d72;
+  --color-primary-900: #0c2748;
+
+  /* ----- Destaque: Âmbar de Construção ----- */
+  --color-accent-400: #f7b84e;
+  --color-accent-500: #f0a121;
+  --color-accent-600: #d4860c;
+
+  /* ----- Neutros: Concreto ----- */
+  --color-ink: #0f2033;
+  --color-muted: #5a6b7e;
+  --color-subtle: #8493a3;
+  --color-border: #d6dee7;
+  --color-surface: #ffffff;
+  --color-bg: #eef2f7;
+
+  /* ----- Feedback ----- */
+  --color-success: #1f9d6b;
+  --color-success-bg: #e8f6ef;
+  --color-error: #d64550;
+  --color-error-bg: #fdecee;
+
+  /* ----- Raios ----- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* ----- Sombras ----- */
+  --shadow-sm: 0 1px 2px rgba(15, 32, 51, 0.06);
+  --shadow-md: 0 10px 30px rgba(15, 32, 51, 0.1);
+  --shadow-lg: 0 24px 60px rgba(12, 39, 72, 0.18);
+
+  /* ----- Anéis de foco ----- */
+  --ring-primary: 0 0 0 3px rgba(31, 95, 176, 0.18);
+  --ring-error: 0 0 0 3px rgba(214, 69, 80, 0.16);
+
+  /* ----- Tipografia ----- */
+  --font-base:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+
+  /* ----- Aliases legados (mantêm o CSS antigo funcionando) ----- */
+  --primary-color: var(--color-primary-500);
+  --secondary-color: var(--color-primary-700);
+  --background-color: var(--color-surface);
+  --text-color: var(--color-ink);
+}

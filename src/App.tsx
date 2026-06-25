@@ -8,18 +8,20 @@ function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <h1 className="page-title">CHSRC Construct</h1>
+        <Link to="/" className="page-title app__brand">
+          CHSRC Construct
+        </Link>
         <nav className="app__nav">
-          {/* <Link to="/">Home</Link> */}
-          {/* <Link to="/sobre">Sobre</Link> */}
-          <Link to="/login">Login</Link>
+          <Link to="/cadastro">Criar conta</Link>
         </nav>
       </header>
 
       <main className="app__content">
         <Routes>
-          <Route path="/" element={<CreateUserPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/cadastro" element={<CreateUserPage />} />
+          {/* Mantém compatibilidade com a antiga rota /login */}
+          <Route path="/login" element={<Navigate to="/" replace />} />
           <Route path="/sobre" element={<AboutPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
